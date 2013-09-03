@@ -2,6 +2,7 @@
 # Filename: 01_dp_problem.py
 # Author  : Zhipeng JIANG
 # Date    : Sep 4, 2013
+# Question: http://jesusjzp.github.io/blog/2013/09/01/Algorithm-training-DPproblem/
 
 ####################
 # function
