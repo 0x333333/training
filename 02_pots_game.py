@@ -16,4 +16,5 @@ def max_coin(pots, start, end):
 
 
 pots = [3, 4, 7, 5]
+print "Pots are", pots
 print "The max coins are", max_coin(pots, 0, 3)
