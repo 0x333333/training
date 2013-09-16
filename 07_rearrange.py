@@ -15,14 +15,23 @@ def swap(list, p1, p2):
 	list[p1] = list[p2]
 	list[p2] = tmp
 
-rawinput = raw_input('Enter the first list of numbers:')
-list1 = rawinput.split(' ')
-print list1
-rawinput = raw_input('Enter the second list of numbers:')
-list2 = rawinput.split(' ')
-print list2
+# rawinput = raw_input('Enter the first list of numbers:')
+# list1 = rawinput.split(' ')
+# print list1
+# rawinput = raw_input('Enter the second list of numbers:')
+# list2 = rawinput.split(' ')
+# print list2
+
+list1 = [4, 0, 2, 1, 3]
+print 'tgt:\n', list1
+list2 = [3, 1, 0, 4, 2]
+print 'src:\n', list2
 
 pos = searchPos(list2, 0)
-swap(list2, 0, pos)
+# swap(list2, 0, pos)
 
-print list2
+while list1[pos] != list2[pos]:
+	pos2 = searchPos(list2, list1[pos])
+	swap(list2, pos, pos2)
+	print list2
+	pos = pos2
