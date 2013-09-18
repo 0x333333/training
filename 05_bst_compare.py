@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Filename: 04_bst_compare.py
+# Filename: 05_bst_compare.py
 # Author  : Zhipeng JIANG
 # Date    : Sep 7, 2013
 # Question: http://www.careercup.com/question?id=19016700
