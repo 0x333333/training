@@ -22,13 +22,13 @@ def find(arr):
         if end - beg > last - first:
             first = beg
             last = end
-        print 'i: ', i
-        print 'table: ', table
-        print 'first: ', first, ' last: ', last
-        print '------'
+        # print 'i: ', i
+        # print 'table: ', table
+        # print 'first: ', first, ' last: ', last
+        # print '------'
     return list(range(first, last + 1))
 
 arr = [3, 6, 10, 4, 7, 9, 1, 8, 11]
-print arr
-print '------'
+# print arr
+# print '------'
 print(find(arr))
