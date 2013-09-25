@@ -17,6 +17,33 @@ def longestPalSubStr(str, p):
 				p[i][j] = (p[i+1][j-1]&(str[i]==str[j]))
 			print p[i][j]
 
+def longestPalSubStr(str):
+	maxLength = 1
+	start = 0
+	length = len(str)
+	low = -1
+	low = -1
+	for i in range(1, length):
+		low = i-1
+		high = i
+		while low >= 0 && high < length && str[low] == str[high]:
+			if high - low + 1 > maxLength:
+				start = low
+				maxLength = high - low + 1
+			low = low - 1
+			high = high + 1
+
+		low = i-1
+		high = i+1
+		while low >= 0 && high < length && str[low] == str[high]:
+			if high - low + 1 > maxLength:
+				start = low
+				maxLength = high - low + 1
+			low = low - 1
+			high = high + 1
+	return maxLength
+
+
 p = [[False, False, False],
 	[False, False, False],
 	[False, False, False]]
