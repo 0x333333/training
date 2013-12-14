@@ -1,0 +1,31 @@
+procédure Tri-shell(var t: tableau[1..n] de Elément);
+var
+    i, j, k, incr : i..n;
+    x : Elément;
+
+début
+    incr := n div 2;
+    {incr >= 0 && incr = n/2}
+    répéter
+        pour k de 1 à incr faire
+            {k >= 1 && k <= incr}
+            pour i variant de incr+k à n pas inc faire
+                {i >= incr+k && i <= n}
+                x := t[i];
+                j := i-incr;
+
+                tantque t[j] > x et j >= 1 faire
+                    {t[j] > x & j>= 1}
+                    t[j+incr] := t[j];
+                    j := j-incr;
+                    {t[i] > t[j]}
+                fintantque;
+
+                t[j+incr] := x;
+            finpour;
+        finpour;
+
+        incr := incr div 2;
+        {incr >= 0}
+    jusqu'à incr = 0
+fin;
